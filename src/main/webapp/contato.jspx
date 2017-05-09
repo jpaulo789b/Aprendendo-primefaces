@@ -33,7 +33,16 @@
 					<h:outputText value="Telefone"></h:outputText>
 				</f:facet>
 				<h:outputText value="#{cont.telefone }"></h:outputText>
-			</p:column>	
+			</p:column>
+			<p:column sortBy="#{cont.telefone }">
+				<f:facet name="header">
+					<h:outputText value="Ações"></h:outputText>
+				</f:facet>
+                <p:commandButton actionListener="#{ContatoControl.confirmar }" value="Editar A" update="contatos, panel"></p:commandButton>
+                <p:commandButton actionListener="#{ContatoControl.confirmar }" value="Editar B" update="contatos, panel"></p:commandButton>
+                <p:commandButton actionListener="#{ContatoControl.confirmar }" value="Editar C" update="contatos, panel"></p:commandButton>
+
+			</p:column>
 		</p:dataTable>
 
 	</ui:define>
